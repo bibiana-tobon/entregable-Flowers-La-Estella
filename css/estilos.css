@@ -1,0 +1,265 @@
+
+/* ESTILOS GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffafa;
+    color: #514747;
+}
+
+/* ENCABEZADO */
+
+header {
+    background-color: #f5e4e8;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: #b76e85;
+    font-size: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #66545a;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #bd7890;
+}
+
+/* INICIO */
+
+.inicio {
+    min-height: 350px;
+    background: linear-gradient(
+        rgba(255, 250, 249, 0.75),
+        rgba(255, 250, 249, 0.75)
+    ), url("../img/rosada.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.inicio h2 {
+    color: #a65f78;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.inicio p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.boton {
+    background-color: #bd7890;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #98566e;
+}
+
+/* CATÁLOGO */
+
+.catalogo {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.catalogo h2,
+.pedidos h2,
+.contacto h2 {
+    color: #a65f78;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+}
+
+.producto img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.producto h3 {
+    color: #a65f78;
+    margin: 15px 0;
+}
+
+.producto p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.precio {
+    color: #728b70;
+    font-weight: bold;
+    font-size: 19px;
+    margin: 15px;
+}
+
+.producto button,
+#formularioPedido button {
+    background-color: #bd7890;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.producto button:hover,
+#formularioPedido button:hover {
+    background-color: #98566e;
+}
+
+/* FORMULARIO */
+
+.pedidos {
+    background-color: #f8edef;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+#formularioPedido {
+    background-color: white;
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+#formularioPedido label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+#formularioPedido input,
+#formularioPedido select,
+#formularioPedido textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e3cbd2;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#formularioPedido textarea {
+    min-height: 90px;
+}
+
+#formularioPedido button {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#respuesta {
+    margin: 20px auto;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+/* CONTACTO */
+
+.contacto {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.contacto p {
+    margin: 10px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #bd7890;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 900px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio h2 {
+        font-size: 28px;
+    }
+}
